@@ -1,6 +1,5 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import "./ItemsInCart.css";
-import { useState } from "react";
 import plus from "../Assets/Photos/plus2.png";
 import minus from "../Assets/Photos/minus.png";
 import { Product } from "../../../constants/interfaces";
@@ -30,9 +29,17 @@ export default function ItemsInCart({ product }: ProductsProps) {
   };
 
   return (
-    <div style={{ color: "black" }} key={product.id} className="product-in-cart">
+    <div
+      style={{ color: "black" }}
+      key={product.id}
+      className="product-in-cart"
+    >
       <div className="img-frame">
-        <img src={product.image} alt={product.title} className="img-product"></img>
+        <img
+          src={product.image}
+          alt={product.title}
+          className="img-product"
+        ></img>
       </div>
       <p
         className="product-title"
@@ -47,11 +54,21 @@ export default function ItemsInCart({ product }: ProductsProps) {
       </p>
       <p>{product.price}$</p>
       <div className="product-counter">
-        <img className="plus" onClick={() => plusCount(product.id)} src={plus} alt="" />
+        <img
+          className="plus"
+          onClick={() => plusCount(product.id)}
+          src={plus}
+          alt=""
+        />
         <p className="counter" style={{ fontSize: "18px", marginTop: "3px" }}>
           {count[product.id] || 1}
         </p>
-        <img className="minus" onClick={() => minusCount(product.id)} src={minus} alt="" />
+        <img
+          className="minus"
+          onClick={() => minusCount(product.id)}
+          src={minus}
+          alt=""
+        />
       </div>
     </div>
   );
