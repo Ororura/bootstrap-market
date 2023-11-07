@@ -1,5 +1,5 @@
 import Products from "../Components/Products/Products";
-import withNavbar from "../../HOC/HOC";
+import withNavbar from "../Components/HOC/HOC";
 
 const Main = () => {
   return <Products></Products>;

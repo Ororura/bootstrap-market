@@ -1,6 +1,6 @@
 import { ReactNode } from "react";
-import Logo from "../ui/Components/Assets/Photos/logo.png";
-import Sidebar from "../ui/Components/Sidebar/Sidebar";
+import Logo from "../Assets/Photos/logo.png";
+import Sidebar from "../Sidebar/Sidebar";
 import { Container, Navbar } from "react-bootstrap";
 
 const withNavbar = (WrappedComponent: ReactNode) => {
