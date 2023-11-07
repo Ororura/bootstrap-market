@@ -1,21 +1,12 @@
-import React from "react";
-import Logo from "../Components/Assets/Photos/logo.png";
-import Sidebar from "../Components/Sidebar/Sidebar";
+import React, { FC } from "react";
 import Products from "../Components/Products/Products";
-import { Container, Navbar } from "react-bootstrap";
+import withNavbar from "../../HOC/hoc";
 
-export default function Main() {
-  return (
-    <>
-      <Navbar expand="lg" style={{ background: "#0d6efd" }}>
-        <Container>
-          <Navbar.Brand href="#home">
-            <img src={Logo} alt="" style={{ width: "60px", height: "64px" }} />
-          </Navbar.Brand>
-          <Sidebar></Sidebar>
-        </Container>
-      </Navbar>
-      <Products></Products>
-    </>
-  );
-}
+
+const Main: FC = () => {
+  return <Products></Products>;
+};
+
+const MainWithNavbar = withNavbar(<Main />);
+
+export default MainWithNavbar;
