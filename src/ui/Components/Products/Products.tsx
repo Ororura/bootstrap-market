@@ -36,7 +36,7 @@ export default function Products() {
   }, []);
 
   return (
-    <Container style={{ width: "70%" }}>
+    <Container style={{ width: "85%" }}>
       <Row>
         {shopData.map((product) => (
           <Col md={3} sm={6}>
@@ -44,7 +44,7 @@ export default function Products() {
               <div className="d-flex align-items-center" style={{ height: "250px" }}>
                 <Card.Img
                   className="mx-auto"
-                  style={{ maxHeight: "250px", width: "140px" }}
+                  style={{ maxHeight: "250px", width: "140px", minWidth: "110px" }}
                   variant="top"
                   src={product.image}
                 />{" "}

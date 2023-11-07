@@ -17,7 +17,7 @@ export default function Cart() {
   return (
     <div className="products-cart">
       {filteredCart.map((product) => (
-        <ItemsInCart key={product.id} count={count} setCount={setCount} product={product}></ItemsInCart>
+        <ItemsInCart  key={product.id} count={count} setCount={setCount} product={product}></ItemsInCart>
       ))}
     </div>
   );

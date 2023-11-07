@@ -1,55 +1,30 @@
-import React from "react";
-import logo from "../Assets/Photos/logo.png";
-import "./Sidebar.css";
+import React, { useState } from "react";
 import Cart from "../Cart/Cart";
-import {
-  CDBSidebar,
-  CDBSidebarContent,
-  CDBSidebarFooter,
-  CDBSidebarHeader,
-  CDBSidebarMenu,
-  CDBSidebarMenuItem,
-} from "cdbreact";
+import { Button, Container, Navbar, Offcanvas } from "react-bootstrap";
+import * as Icon from "react-bootstrap-icons";
+import { AiOutlineShoppingCart, AiOutlineMenuUnfold } from "react-icons/ai";
 
 function Sidebar() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
-    <div
-      style={{
-        display: "flex",
-        height: "100vh",
-        overflow: "scroll initial",
-        position: "fixed",
-      }}
-    >
-      <CDBSidebar
-        textColor="#fff"
-        backgroundColor="#333"
-        className={""}
-        breakpoint={0}
-        toggled={true}
-        minWidth={"70px"}
-        maxWidth={"200px"}
-      >
-        <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
-          Cart
-        </CDBSidebarHeader>
-        <CDBSidebarContent className="sidebar-content">
-          <CDBSidebarMenu>
-            <CDBSidebarMenuItem>
-              <Cart></Cart>
-            </CDBSidebarMenuItem>
-          </CDBSidebarMenu>
-        </CDBSidebarContent>
-        <CDBSidebarFooter>
-          <div
-            className="sidebar-btn-wrapper"
-            style={{
-              padding: "20px 5px",
-            }}
-          ></div>
-        </CDBSidebarFooter>
-      </CDBSidebar>
-    </div>
+    <>
+      <Button variant="primary" onClick={handleShow}>
+        <AiOutlineMenuUnfold size={40}></AiOutlineMenuUnfold>
+      </Button>
+      <Offcanvas style={{ background: "#0d6efd" }} show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>
+            <AiOutlineShoppingCart size={40}></AiOutlineShoppingCart>Cart
+          </Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <Cart></Cart>
+        </Offcanvas.Body>
+      </Offcanvas>
+    </>
   );
 }
 
