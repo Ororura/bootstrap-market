@@ -1,4 +1,4 @@
-import React, { ComponentType, ReactNode } from "react";
+import { ReactNode } from "react";
 import Logo from "../ui/Components/Assets/Photos/logo.png";
 import Sidebar from "../ui/Components/Sidebar/Sidebar";
 import { Container, Navbar } from "react-bootstrap";

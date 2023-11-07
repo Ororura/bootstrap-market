@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Cart from "../Cart/Cart";
 import { Button, Offcanvas } from "react-bootstrap";
 import { AiOutlineShoppingCart, AiOutlineMenuUnfold } from "react-icons/ai";

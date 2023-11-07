@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import plus from "../Assets/Photos/plus2.png";
 import minus from "../Assets/Photos/minus.png";
 import { ProductsProps } from "../../../constants/interfaces";

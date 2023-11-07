@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from "react";
+import { useEffect, useContext } from "react";
 import vector from "../Assets/Photos/vector.png";
 import filledVector from "../Assets/Photos/filled_vector.png";
 import star from "../Assets/Photos/star.png";

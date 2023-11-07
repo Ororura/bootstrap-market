@@ -1,4 +1,3 @@
-import React from "react";
 import Main from "../Pages/Main";
 import { ProductProvider } from "../../core/Context";
 
