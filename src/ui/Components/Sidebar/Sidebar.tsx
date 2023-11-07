@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Cart from "../Cart/Cart";
 import { Button, Container, Navbar, Offcanvas } from "react-bootstrap";
-import * as Icon from "react-bootstrap-icons";
 import { AiOutlineShoppingCart, AiOutlineMenuUnfold } from "react-icons/ai";
 
 function Sidebar() {

@@ -31,7 +31,6 @@ export default function Products() {
   };
 
   useEffect(() => {
-    console.log(cart);
     getProducts();
   }, []);
 
@@ -53,10 +52,14 @@ export default function Products() {
                 <Card.Title>{product.id} id</Card.Title>
                 <Card.Title className="overflow-hidden text-truncate text-nowrap">{product.title}</Card.Title>
                 <Card.Text className="overflow-hidden text-truncate text-nowrap">{product.description}</Card.Text>
+                <Card.Text>Count: {product.rating.count}</Card.Text>
                 <div className="d-flex">
-                  <Card.Text>{product.price}$</Card.Text>
+                  <div className="d-flex">
+                    <img className="mr-10" src={star} style={{ width: "20px", height: "20px" }} alt="" />
+                    <Card.Text style={{ marginLeft: "3px" }}>{product.rating.rate}</Card.Text>
+                  </div>
                   <div className="ms-auto d-flex">
-                    <Card.Text>{product.rating.count}</Card.Text>
+                    <Card.Text>{product.price}$</Card.Text>
                     <img
                       className="add-prod ms-1"
                       style={{ width: "20px", height: "24px" }}
