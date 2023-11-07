@@ -5,8 +5,6 @@ import { ProductsProps } from "../../../constants/interfaces";
 import { ProductContext } from "../../../core/Context";
 import { Card } from "react-bootstrap";
 
-
-
 export default function ItemsInCart({ product }: ProductsProps) {
   const { count, setCount } = useContext(ProductContext);
 
