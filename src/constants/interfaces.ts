@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { Dispatch, ReactNode, SetStateAction } from "react";
 
 interface Product {
     id: number;
@@ -18,11 +18,11 @@ interface Rating {
 
 interface IProdValues {
   cart: Product[];
-  setCart: React.Dispatch<React.SetStateAction<Product[]>>;
+  setCart: Dispatch<SetStateAction<Product[]>>;
   count: { [key: number]: number };
-  setCount: React.Dispatch<React.SetStateAction<{ [key: number]: number }>>;
+  setCount: Dispatch<SetStateAction<{ [key: number]: number }>>;
   shopData: Product[];
-  setShopData: React.Dispatch<React.SetStateAction<Product[]>>;
+  setShopData: Dispatch<SetStateAction<Product[]>>;
   getProducts: () => Promise<Product[]>;
 }
 
@@ -33,7 +33,7 @@ interface IProductProviderProps {
 interface ProductsProps {
     product: Product;
     count: { [key: number]: number };
-    setCount: React.Dispatch<React.SetStateAction<{ [key: number]: number }>>;
+    setCount: Dispatch<SetStateAction<{ [key: number]: number }>>;
 }
 
 export type { Product, Rating, IProdValues, IProductProviderProps, ProductsProps };

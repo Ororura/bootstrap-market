@@ -25,7 +25,9 @@ export default function Products() {
   };
 
   useEffect(() => {
-    getProducts();
+    (async () => {
+      await getProducts();
+    })();
   }, []);
 
   return (
