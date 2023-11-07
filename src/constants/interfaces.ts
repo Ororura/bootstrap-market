@@ -1,3 +1,5 @@
+import React, { ReactNode } from "react";
+
 interface Product {
     id: number;
     title: string;
@@ -24,4 +26,14 @@ interface IProdValues {
   getProducts: () => Promise<Product[]>;
 }
 
-export type { Product, Rating, IProdValues };
+interface IProductProviderProps {
+  children: ReactNode;
+}
+
+interface ProductsProps {
+    product: Product;
+    count: { [key: number]: number };
+    setCount: React.Dispatch<React.SetStateAction<{ [key: number]: number }>>;
+}
+
+export type { Product, Rating, IProdValues, IProductProviderProps, ProductsProps };

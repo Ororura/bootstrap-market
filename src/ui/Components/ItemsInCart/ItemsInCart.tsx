@@ -1,15 +1,11 @@
 import React, { useContext } from "react";
 import plus from "../Assets/Photos/plus2.png";
 import minus from "../Assets/Photos/minus.png";
-import { Product } from "../../../constants/interfaces";
+import { ProductsProps } from "../../../constants/interfaces";
 import { ProductContext } from "../../../core/Context";
 import { Card } from "react-bootstrap";
 
-interface ProductsProps {
-  product: Product;
-  count: { [key: number]: number };
-  setCount: React.Dispatch<React.SetStateAction<{ [key: number]: number }>>;
-}
+
 
 export default function ItemsInCart({ product }: ProductsProps) {
   const { count, setCount } = useContext(ProductContext);

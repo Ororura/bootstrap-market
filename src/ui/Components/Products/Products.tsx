@@ -43,7 +43,7 @@ export default function Products() {
                 />{" "}
               </div>
               <Card.Body>
-                <Card.Title>id: {product.id}</Card.Title>
+                <Card.Title>Id: {product.id}</Card.Title>
                 <Card.Title className="overflow-hidden text-truncate text-nowrap">{product.title}</Card.Title>
                 <Card.Text className="overflow-hidden text-truncate text-nowrap">{product.description}</Card.Text>
                 <Card.Text>Count: {product.rating.count}</Card.Text>
