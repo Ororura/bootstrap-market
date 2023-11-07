@@ -1,4 +1,16 @@
 import axios from "axios";
-export default function ProductsApi() {
-    return axios.get("https://fakestoreapi.com/products");
+
+class PostService {
+  baseURL = "https://fakestoreapi.com/products";
+
+  getPosts() {
+    return axios.get(this.baseURL);
+  }
+
+  getPostById(id: number) {
+    return axios.get(`${this.baseURL}/${id}`);
+  }
 }
+
+export default new PostService();
+

@@ -14,4 +14,14 @@ interface Rating {
     count: number;
 }
 
-export type { Product, Rating };
+interface IProdValues {
+  cart: Product[];
+  setCart: React.Dispatch<React.SetStateAction<Product[]>>;
+  count: { [key: number]: number };
+  setCount: React.Dispatch<React.SetStateAction<{ [key: number]: number }>>;
+  shopData: Product[];
+  setShopData: React.Dispatch<React.SetStateAction<Product[]>>;
+  getProducts: () => Promise<Product[]>;
+}
+
+export type { Product, Rating, IProdValues };
