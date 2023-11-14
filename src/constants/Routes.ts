@@ -1,6 +1,10 @@
 import CartPage from "../ui/Pages/CartPage";
 import Main from "../ui/Pages/Main"
-import { RouteType } from "./interfaces";
+
+interface RouteType {
+  path: string;
+  component: () => JSX.Element;
+}
 
 const Routs: RouteType[] = [
   {

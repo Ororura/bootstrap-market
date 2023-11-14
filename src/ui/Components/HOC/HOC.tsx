@@ -4,7 +4,7 @@ import { Container, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 
-const withNavbar = (WrappedComponent: ReactNode) => {
+const WithNavbar = (WrappedComponent: ReactNode) => {
   return () => {
     return (
       <>
@@ -26,4 +26,4 @@ const withNavbar = (WrappedComponent: ReactNode) => {
   };
 };
 
-export default withNavbar;
+export default WithNavbar;

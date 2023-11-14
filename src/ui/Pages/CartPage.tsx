@@ -1,6 +1,6 @@
 import React from "react";
 import Cart from "../Components/Cart/Cart";
-import withNavbar from "../Components/HOC/HOC";
+import WithNavbar from "../Components/HOC/HOC";
 
 function WithounNavBarCartPage() {
   return (
@@ -13,5 +13,5 @@ function WithounNavBarCartPage() {
   );
 }
 
-const CartPage = withNavbar(<WithounNavBarCartPage />);
+const CartPage: () => JSX.Element = WithNavbar(<WithounNavBarCartPage />);
 export default CartPage;

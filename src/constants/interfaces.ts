@@ -36,9 +36,5 @@ interface ProductsProps {
     setCount: Dispatch<SetStateAction<{ [key: number]: number }>>;
 }
 
-interface RouteType {
-  path: string;
-  component: ComponentType;
-}
 
-export type { Product, Rating, IProdValues, IProductProviderProps, ProductsProps, RouteType };
+export type { Product, Rating, IProdValues, IProductProviderProps, ProductsProps };

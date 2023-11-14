@@ -7,7 +7,7 @@ import { ProductContext } from "../../../core/Context";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
-export default function Products() {
+export default function Products(): JSX.Element {
   const { cart, setCart } = useContext(ProductContext);
   const { count, setCount } = useContext(ProductContext);
   const { shopData } = useContext(ProductContext);
@@ -33,8 +33,8 @@ export default function Products() {
   return (
     <Container style={{ width: "85%" }}>
       <Row>
-        {shopData.map((product) => (
-          <Col md={3} sm={6}>
+        {shopData.map((product, idx) => (
+          <Col key={idx} md={3} sm={6}>
             <Card className="shadow-sm mt-4 bg-white rounded">
               <div className="d-flex align-items-center" style={{ height: "250px" }}>
                 <Card.Img

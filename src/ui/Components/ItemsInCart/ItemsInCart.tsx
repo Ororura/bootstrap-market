@@ -5,7 +5,7 @@ import { ProductsProps } from "../../../constants/interfaces";
 import { ProductContext } from "../../../core/Context";
 import { Card } from "react-bootstrap";
 
-export default function ItemsInCart({ product }: ProductsProps) {
+export default function ItemsInCart({ product }: ProductsProps): JSX.Element {
   const { count, setCount } = useContext(ProductContext);
 
   const plusCount = (productId: number) => {
@@ -23,7 +23,7 @@ export default function ItemsInCart({ product }: ProductsProps) {
   };
 
   return (
-    <Card style={{ width: "18rem", margin: "15px" }} className="mx-auto">
+    <Card style={{ margin: "15px" }} className="mx-auto">
       <div className="d-flex align-items-center" style={{ height: "250px" }}>
         <Card.Img
           className="mx-auto"

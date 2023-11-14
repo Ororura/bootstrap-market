@@ -2,7 +2,7 @@ import React, { FC, useState } from "react";
 import { Product, IProdValues, IProductProviderProps } from "../constants/interfaces";
 import ProductsApi from "../services/ProductsApi";
 
-export const ProductContext = React.createContext({} as IProdValues);
+export const ProductContext: React.Context<IProdValues> = React.createContext({} as IProdValues);
 
 export const ProductProvider: FC<IProductProviderProps> = ({ children }) => {
   const [cart, setCart] = useState<Product[]>([]);
