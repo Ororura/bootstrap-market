@@ -23,7 +23,7 @@ export default function ItemsInCart({ product }: ProductsProps) {
   };
 
   return (
-    <Card style={{ width: "18rem", marginBottom: "10px" }} className="mx-auto">
+    <Card style={{ width: "18rem", margin: "15px" }} className="mx-auto">
       <div className="d-flex align-items-center" style={{ height: "250px" }}>
         <Card.Img
           className="mx-auto"

@@ -42,7 +42,7 @@ export default function Products() {
                   style={{ maxHeight: "250px", width: "140px", minWidth: "110px" }}
                   variant="top"
                   src={product.image}
-                />{" "}
+                />
               </div>
               <Card.Body>
                 <Card.Title>Id: {product.id}</Card.Title>

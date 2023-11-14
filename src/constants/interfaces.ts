@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction } from "react";
+import React, { ComponentType, Dispatch, ReactNode, SetStateAction } from "react";
 
 interface Product {
     id: number;
@@ -36,4 +36,9 @@ interface ProductsProps {
     setCount: Dispatch<SetStateAction<{ [key: number]: number }>>;
 }
 
-export type { Product, Rating, IProdValues, IProductProviderProps, ProductsProps };
+interface RouteType {
+  path: string;
+  component: ComponentType;
+}
+
+export type { Product, Rating, IProdValues, IProductProviderProps, ProductsProps, RouteType };
