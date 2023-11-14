@@ -1,8 +1,7 @@
 import { useContext } from "react";
-import "./Cart.css";
 import ItemsInCart from "../ItemsInCart/ItemsInCart";
 import { ProductContext } from "../../../core/Context";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 export default function Cart() {
   const { cart } = useContext(ProductContext);
@@ -19,11 +18,6 @@ export default function Cart() {
           ))}
         </Row>
       </Container>
-      <div className="text-center">
-        <Button className="mg-auto" size="lg" variant="primary">
-          Order Now
-        </Button>{" "}
-      </div>
     </>
   );
 }

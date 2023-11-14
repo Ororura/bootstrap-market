@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import Logo from "../Assets/Photos/logo.png";
-import Sidebar from "../Sidebar/Sidebar";
 import { Container, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
